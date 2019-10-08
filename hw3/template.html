@@ -75,7 +75,7 @@
         }
 
         h1.headline {
-            font-size: 4rem;
+            font-size: 2rem;
             line-height: 1.1;
             margin-bottom: 0.25rem;
             margin-top: 1rem;
@@ -91,7 +91,7 @@
         }
 
         p.body-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.4;
             margin-top:0;
             margin-bottom:15px;
@@ -256,26 +256,22 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
       
-    <title>This is your title</title>
+    <title>Uteuova Visuals</title>
   </head>
 
   <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
 
     <div class="header">
 
-      <h1 class="headline">International Response to China's Treatment of Muslims</h1>
-      <h2 class="subhead">In July 2019, 59 nations sent letters to UN in either condemnation or support of reeducation camps </h2>
+      <h1 class="headline">Examples of Data Visualization</h1>
       <p class="byline">By Aliya Uteuova</p>
-      <p class="date">Published September 12, 2019</p>
     </div>
 
     <div class="story-body">
-      <p class="body-text serif">In 2017, reports began to trickle out about large number of Uyghurs – the largest Muslim ethnic group in the region – being corralled into internment camps. Rights groups have said inmates in those gargantuan facilities are forced to undergo political indoctrination and to renounce their faith. Experts on the United Nations Committee on the Elimination of Racial Discrimination have assessed that around a million Uyghurs and other communities, including Kazakhs and Kyrgyz, have been detained in this way.
+      <p class="body-text serif">Below is an example of a map I created using a geographic information system software QGIS. I analyzed and edited spatial information with which I composed a graphical maps. 
 
     </p>
-      <p class="body-text serif">In a letter to the United Nations Human Rights Council, ambassadors from 22 spoke out against the unlawful detention of Turkic Muslim minorities in Xinjiang.
-
-        Among the co-signers are Britain, France and Germany, along with Australia, Canada and Japan. The United States quit the UN Human Rights Council council a year ago.</p>
+      <p class="body-text serif">Additionally, I polished up the map using Adobe Illustrator. I also made this map responsive using ai2html. If you minimize the window size or view it on a mobile device, different images of the same information will be shown. </p>
     </div>
 
 
@@ -562,343 +558,14 @@
 
     <div class="story-body">
         <p class="body-text serif">
-
-            This poll was conducted between Aug. 29 and Sept. 2, 2018, surveyed 1,003 adult women in the U.S. and had a margin of error or plus or minus 3.6 percentage points.</p>
-
-    
-    <script type="text/javascript">
-    (function() {
-        // only want one resizer on the page
-        if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
-        document.documentElement.className += " g-resizer-v3-init";
-        // require IE9+
-        if (!("querySelector" in document)) return;
-        function resizer() {
-            var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
-                widthById = {};
-            elements.forEach(function(el) {
-                var parent = el.parentNode,
-                    width = widthById[parent.id] || parent.getBoundingClientRect().width,
-                    minwidth = el.getAttribute("data-min-width"),
-                    maxwidth = el.getAttribute("data-max-width");
-                widthById[parent.id] = width;
-                if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
-                    el.style.display = "block";
-                } else {
-                    el.style.display = "none";
-                }
-            });
-            try {
-                if (window.parent && window.parent.$) {
-                    window.parent.$("body").trigger("resizedcontent", [window]);
-                }
-                if (window.require) {
-                    require(['foundation/main'], function() {
-                        require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
-                            AppCommunicator.triggerResize();
-                        });
-                    });
-                }
-            } catch(e) { console.log(e); }
-        }
-        document.addEventListener('DOMContentLoaded', resizer);
-        // feel free to replace throttle with _.throttle, if available
-        window.addEventListener('resize', throttle(resizer, 200));        
-        function throttle(func, wait) {
-            // from underscore.js
-            var _now = Date.now || function() { return new Date().getTime(); },
-                context, args, result, timeout = null, previous = 0;
-            var later = function() {
-                previous = _now();
-                timeout = null;
-                result = func.apply(context, args);
-                if (!timeout) context = args = null;
-            };
-            return function() {
-                var now = _now(), remaining = wait - (now - previous);
-                context = this;
-                args = arguments;
-                if (remaining <= 0 || remaining > wait) {
-                    if (timeout) {
-                        clearTimeout(timeout);
-                        timeout = null;
-                    }
-                    previous = now;
-                    result = func.apply(context, args);
-                    if (!timeout) context = args = null;
-                } else if (!timeout && options.trailing !== false) {
-                    timeout = setTimeout(later, remaining);
-                }
-                return result;
-            };
-        }
-       
-    })();
-</script>
-<!-- Generated by ai2html v0.89.0 - 2019-09-19 14:56 -->
-<!-- ai file: templates.ai -->
-<style type='text/css' media='screen,print'>
-	#g-templates-box .g-artboard {
-		margin:0 auto;
-	}
-	#g-templates-box p {
-		margin:0;
-	}
-	.g-aiAbs {
-		position:absolute;
-	}
-	.g-aiImg {
-		display:block;
-		width:100% !important;
-	}
-	.g-aiSymbol {
-		position: absolute;
-		box-sizing: border-box;
-	}
-	.g-aiPointText p { white-space: nowrap; }
-	#g-templates-medium {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-templates-medium p {
-		font-weight:500;
-		font-size:18px;
-		line-height:22px;
-		height:auto;
-		filter:alpha(opacity=100);
-		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-		opacity:1;
-		letter-spacing:0em;
-		text-align:left;
-		color:rgb(0,0,0);
-		text-transform:none;
-		padding-bottom:0;
-		padding-top:0;
-		mix-blend-mode:normal;
-		font-style:normal;
-		position:static;
-	}
-	#g-templates-medium .g-pstyle0 {
-		height:22px;
-	}
-	#g-templates-medium .g-pstyle1 {
-		font-family:arial,helvetica,sans-serif;
-		font-size:16px;
-		line-height:19px;
-		height:19px;
-	}
-	#g-templates-medium .g-pstyle2 {
-		font-family:arial,helvetica,sans-serif;
-		font-size:12px;
-		line-height:14px;
-		height:14px;
-	}
-	#g-templates-laptop {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-templates-laptop p {
-		font-family:arial,helvetica,sans-serif;
-		font-size:12px;
-		line-height:14px;
-		height:auto;
-		filter:alpha(opacity=100);
-		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-		opacity:1;
-		letter-spacing:0em;
-		text-align:left;
-		color:rgb(102,102,102);
-		text-transform:none;
-		padding-bottom:0;
-		padding-top:0;
-		mix-blend-mode:normal;
-		font-style:normal;
-		position:static;
-	}
-	#g-templates-laptop .g-pstyle0 {
-		font-weight:bold;
-		font-size:16px;
-		line-height:19px;
-		height:19px;
-		color:rgb(77,77,77);
-	}
-	#g-templates-laptop .g-pstyle1 {
-		font-size:14px;
-		line-height:17px;
-		height:17px;
-	}
-	#g-templates-laptop .g-pstyle2 {
-		height:14px;
-	}
-	#g-templates-laptop .g-pstyle3 {
-		font-weight:bold;
-		height:14px;
-		color:rgb(0,0,0);
-	}
-	#g-templates-laptop .g-pstyle4 {
-		font-weight:bold;
-		height:14px;
-		color:rgb(255,255,255);
-	}
-	#g-templates-laptop .g-pstyle5 {
-		height:14px;
-		color:rgb(77,77,77);
-	}
-	#g-templates-mobile {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-templates-mobile p {
-		font-family:arial,helvetica,sans-serif;
-		font-size:14px;
-		line-height:17px;
-		height:auto;
-		filter:alpha(opacity=100);
-		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-		opacity:1;
-		letter-spacing:0em;
-		text-align:left;
-		color:rgb(0,0,0);
-		text-transform:none;
-		padding-bottom:0;
-		padding-top:0;
-		mix-blend-mode:normal;
-		font-style:normal;
-		position:static;
-	}
-	#g-templates-mobile .g-pstyle0 {
-		height:17px;
-	}
-	#g-templates-mobile .g-pstyle1 {
-		font-weight:500;
-		font-size:12px;
-		line-height:14px;
-		height:14px;
-	}
-	#g-templates-mobile .g-pstyle2 {
-		font-weight:500;
-		font-size:12px;
-		line-height:14px;
-		height:14px;
-		text-align:justify;
-	}
-	#g-templates-mobile .g-pstyle3 {
-		font-size:12px;
-		line-height:14px;
-		height:14px;
-	}
-
-</style>
-
-<div id="g-templates-box" class="ai2html">
-
-	<!-- Artboard: medium -->
-	<div id="g-templates-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
-		<img id="g-templates-medium-img" class="g-aiImg g-aiAbs" alt="" src="templates2-medium.png"/>
-		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.0666%;margin-top:-11.8px;left:2.8953%;width:605px;">
-			<p class="g-pstyle0">Percentage of Women Who Were More Politically Engaged Ahead of 2018 Midterms</p>
-		</div>
-		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:91.756%;margin-top:-11px;left:68.8325%;width:105px;">
-			<p class="g-pstyle1">Independent</p>
-		</div>
-		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:91.756%;margin-top:-11px;left:44.8974%;width:97px;">
-			<p class="g-pstyle1">Republican</p>
-		</div>
-		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:91.9913%;margin-top:-11px;left:21.2285%;width:87px;">
-			<p class="g-pstyle1">Democrat</p>
-		</div>
-		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.1993%;margin-top:-8.1px;left:2.6377%;width:95px;">
-			<p class="g-pstyle2">Source: TIME</p>
-		</div>
-	</div>
-
-	<!-- Artboard: laptop -->
-	<div id="g-templates-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
-		<img id="g-templates-laptop-img" class="g-aiImg g-aiAbs" alt="" src="templates1-laptop.png"/>
-		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:7.8214%;margin-top:-11.4px;left:27.671%;width:232px;">
-			<p class="g-pstyle0">Midterm Results By Gender</p>
-		</div>
-		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.5086%;margin-top:-9.8px;left:30.5604%;width:83px;">
-			<p class="g-pstyle1">Democrat</p>
-		</div>
-		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.7944%;margin-top:-9.8px;left:63.6217%;width:92px;">
-			<p class="g-pstyle1">Republican</p>
-		</div>
-		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:36.8849%;margin-top:-8.1px;left:13.0094%;width:48px;">
-			<p class="g-pstyle2">Male</p>
-		</div>
-		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9732%;margin-top:-8.4px;left:35.8988%;width:46px;">
-			<p class="g-pstyle3">49%</p>
-		</div>
-		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9732%;margin-top:-8.4px;left:71.0009%;width:46px;">
-			<p class="g-pstyle4">51%</p>
-		</div>
-		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.6875%;margin-top:-8.4px;left:13.858%;width:46px;">
-			<p class="g-pstyle3">48%</p>
-		</div>
-		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:62.0278%;margin-top:-8.1px;left:11.7849%;width:62px;">
-			<p class="g-pstyle5">Female</p>
-		</div>
-		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:66.6875%;margin-top:-8.4px;left:35.8988%;width:46px;">
-			<p class="g-pstyle4">59%</p>
-		</div>
-		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:67.2589%;margin-top:-8.4px;left:70.5927%;width:46px;">
-			<p class="g-pstyle3">40%</p>
-		</div>
-		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:70.9732%;margin-top:-8.4px;left:13.9868%;width:46px;">
-			<p class="g-pstyle3">52%</p>
-		</div>
-		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:93.5135%;margin-top:-15.3px;left:3.6217%;width:129px;">
-			<p class="g-pstyle2">18778 Respondents</p>
-			<p class="g-pstyle2">Source: CNN</p>
-		</div>
-	</div>
-
-	<!-- Artboard: mobile -->
-	<div id="g-templates-mobile" class="g-artboard" style="width:375px; height:265.799999999999px;" data-aspect-ratio="1.411" data-min-width="375" data-max-width="489">
-		<img id="g-templates-mobile-img" class="g-aiImg g-aiAbs" alt="" src="templates3-mobile.png"/>
-		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:5.9369%;margin-top:-9.8px;left:1.581%;width:389px;">
-			<p class="g-pstyle0">Percentage of Female Votes Along Party Lines In Midterms</p>
-		</div>
-		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.7678%;margin-top:-15.2px;left:34.9911%;width:114px;">
-			<p class="g-pstyle1">College-Educated </p>
-		</div>
-		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:31.0466%;margin-top:-7.5px;left:32.8651%;width:34px;">
-			<p class="g-pstyle1">59</p>
-		</div>
-		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:31.0466%;margin-top:-7.5px;left:66.6755%;width:34px;">
-			<p class="g-pstyle1">39</p>
-		</div>
-		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.754%;margin-top:-14.7px;left:60.2896%;width:34px;">
-			<p class="g-pstyle1">56</p>
-		</div>
-		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:69.4214%;margin-top:-7.5px;left:27.3773%;width:34px;">
-			<p class="g-pstyle1">42</p>
-		</div>
-		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:73%;margin-top:-NaNpx;left:34.7771%;width:132px;">
-			<p>&nbsp;</p>
-			<p class="g-pstyle2">Non College-Educater</p>
-		</div>
-		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:90.4898%;margin-top:-7.5px;left:50.038%;width:34px;">
-			<p class="g-pstyle1">50</p>
-		</div>
-		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:90.4898%;margin-top:-7.5px;left:12.1714%;width:28px;">
-			<p class="g-pstyle1">0</p>
-		</div>
-		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:90.4898%;margin-top:-7.5px;left:87.3714%;width:40px;">
-			<p class="g-pstyle1">100</p>
-		</div>
-		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.102%;margin-top:-8.1px;left:65.525%;width:141px;">
-			<p class="g-pstyle3">Source: PewResearch</p>
-		</div>
-	</div>
-
-</div>
-
-<!-- End ai2html - 2019-09-19 14:56 -->
-
             
-        <p class="body-text serif">Despite the rise in Democratic votes, second largest state in the States went to an incumbent Senate nominee from the Republican Party Ted Cruz.</p>
+            
+
+            I made the graphic below using a plotting tool Matplotlib. I analyzed the historical dataset using Python and Excel and finished it up with Adobe Illustrator touch-ups.</p>
+    
+<img src="/Users/aliyaute/Desktop/Fall_2019_Columbia/Fall_Data/hw1/templat_medium.png"  width='770' height='550'>
+            
+        <p class="body-text serif">This is an example of a map created using QGIS.</p>
     </div>
     
     <script type="text/javascript">
