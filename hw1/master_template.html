@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 2rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:15px;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+
+        #g-templates-laptop, #g-templates-medium, #g-templates-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-templates-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-templates-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-templates-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Uteuova Visuals</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+
+      <h1 class="headline">Examples of Data Visualization</h1>
+      <p class="byline">By Aliya Uteuova</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">Below is an example of a map I created using a geographic information system software QGIS. I analyzed and edited spatial information with which I composed a graphical maps. 
+
+    </p>
+      <p class="body-text serif">Additionally, I polished up the map using Adobe Illustrator. I also made this map responsive using ai2html. If you minimize the window size or view it on a mobile device, different images of the same information will be shown. </p>
+    </div>
+
+
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+           <!-- Generated by ai2html v0.89.0 - 2019-09-17 16:34 -->
+<!-- ai file: china_countries_hw1.ai -->
+<script type="text/javascript">
+    (function() {
+        // only want one resizer on the page
+        if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+        document.documentElement.className += " g-resizer-v3-init";
+        // require IE9+
+        if (!("querySelector" in document)) return;
+        function resizer() {
+            var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                widthById = {};
+            elements.forEach(function(el) {
+                var parent = el.parentNode,
+                    width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                    minwidth = el.getAttribute("data-min-width"),
+                    maxwidth = el.getAttribute("data-max-width");
+                widthById[parent.id] = width;
+                if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                    el.style.display = "block";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+            try {
+                if (window.parent && window.parent.$) {
+                    window.parent.$("body").trigger("resizedcontent", [window]);
+                }
+                if (window.require) {
+                    require(['foundation/main'], function() {
+                        require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                            AppCommunicator.triggerResize();
+                        });
+                    });
+                }
+            } catch(e) { console.log(e); }
+        }
+        document.addEventListener('DOMContentLoaded', resizer);
+        // feel free to replace throttle with _.throttle, if available
+        window.addEventListener('resize', throttle(resizer, 200));        
+        function throttle(func, wait) {
+            // from underscore.js
+            var _now = Date.now || function() { return new Date().getTime(); },
+                context, args, result, timeout = null, previous = 0;
+            var later = function() {
+                previous = _now();
+                timeout = null;
+                result = func.apply(context, args);
+                if (!timeout) context = args = null;
+            };
+            return function() {
+                var now = _now(), remaining = wait - (now - previous);
+                context = this;
+                args = arguments;
+                if (remaining <= 0 || remaining > wait) {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout = null;
+                    }
+                    previous = now;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                } else if (!timeout && options.trailing !== false) {
+                    timeout = setTimeout(later, remaining);
+                }
+                return result;
+            };
+        }
+       
+    })();
+</script>
+<!-- Generated by ai2html v0.89.0 - 2019-09-17 16:34 -->
+<!-- ai file: china_countries_hw1.ai -->
+<style type='text/css' media='screen,print'>
+	#g-china_countries_hw1-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-china_countries_hw1-box p {
+		margin:0;
+	}
+	.g-aiAbs {
+		position:absolute;
+	}
+	.g-aiImg {
+		display:block;
+		width:100% !important;
+	}
+	.g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	.g-aiPointText p { white-space: nowrap; }
+	#g-china_countries_hw1-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-china_countries_hw1-Artboard_1 p {
+		font-weight:500;
+		font-size:13px;
+		line-height:12px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-china_countries_hw1-Artboard_1 .g-pstyle0 {
+		font-size:18px;
+		height:12px;
+	}
+	#g-china_countries_hw1-Artboard_1 .g-pstyle1 {
+		font-size:14px;
+		line-height:17px;
+		height:17px;
+	}
+	#g-china_countries_hw1-Artboard_1 .g-pstyle2 {
+		font-size:11px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-china_countries_hw1-Artboard_1 .g-pstyle3 {
+		height:12px;
+	}
+	#g-china_countries_hw1-Artboard_3 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-china_countries_hw1-Artboard_3 p {
+		font-weight:500;
+		font-size:8px;
+		line-height:7px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-china_countries_hw1-Artboard_3 .g-pstyle0 {
+		font-size:13px;
+		line-height:9px;
+		height:9px;
+	}
+	#g-china_countries_hw1-Artboard_3 .g-pstyle1 {
+		height:7px;
+	}
+	#g-china_countries_hw1-Artboard_3 .g-pstyle2 {
+		font-size:7px;
+		line-height:9px;
+		height:9px;
+	}
+	#g-china_countries_hw1-Artboard_57 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-china_countries_hw1-Artboard_57 p {
+		font-weight:500;
+		font-size:10px;
+		line-height:12px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-china_countries_hw1-Artboard_57 .g-pstyle0 {
+		height:12px;
+	}
+	#g-china_countries_hw1-Artboard_57 .g-pstyle1 {
+		font-size:8px;
+		line-height:10px;
+		height:10px;
+	}
+
+</style>
+
+<div id="g-china_countries_hw1-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-china_countries_hw1-Artboard_1" class="g-artboard" style="width:842px; height:595px;" data-aspect-ratio="1.415" data-min-width="842">
+		<img id="g-china_countries_hw1-Artboard_1-img" class="g-aiImg g-aiAbs" alt="" src="china_countries_hw1-Artboard_1.jpg"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.9929%;margin-top:-18.7px;left:3.8005%;width:277px;">
+			<p class="g-pstyle0">Who cares about China&rsquo;s Muslims?</p>
+			<p>&nbsp;</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.8335%;margin-top:-17.5px;left:3.8005%;width:384px;">
+			<p class="g-pstyle1">In July 2019, 59 countries responded to China&rsquo;s reeducation of </p>
+			<p class="g-pstyle1">Uighurs, Kazakhs, and other Turkic Muslims in Xinjiang</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.8261%;margin-top:-8.1px;left:70.7246%;width:71px;">
+			<p class="g-pstyle2">  Xinjiang</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.49%;margin-top:-6.6px;left:51.0397%;width:186px;">
+			<p class="g-pstyle3">37 countries supporting China</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.49%;margin-top:-6.6px;left:75.8907%;width:195px;">
+			<p class="g-pstyle3">22 countries condemning China</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.0278%;margin-top:-6.6px;left:51.0397%;width:223px;">
+			<p class="g-pstyle3">Islamic Cooperation Member Nations</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.0614%;margin-top:-6.6px;left:3.5773%;width:205px;">
+			<p class="g-pstyle3">Source: UN Human Rights Council</p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_3 -->
+	<div id="g-china_countries_hw1-Artboard_3" class="g-artboard" style="width:588px; height:297.788873632924px;" data-aspect-ratio="1.975" data-min-width="588" data-max-width="841">
+		<img id="g-china_countries_hw1-Artboard_3-img" class="g-aiImg g-aiAbs" alt="" src="china_countries_hw1-Artboard_3.jpg"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.4582%;margin-top:-14.2px;left:1.0006%;width:208px;">
+			<p class="g-pstyle0">Who cares about China&rsquo;s Muslims?</p>
+			<p>&nbsp;</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:6.6652%;margin-top:-3.8px;left:75.5252%;width:154px;">
+			<p class="g-pstyle1">Source: UN Human Rights Council</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.3765%;margin-top:-5.2px;left:70.8615%;width:58px;">
+			<p class="g-pstyle2">  Xinjiang</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.0089%;margin-top:-3.9px;left:39.19%;width:148px;">
+			<p class="g-pstyle1">22 countries condemning China</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.3447%;margin-top:-3.9px;left:10.4564%;width:142px;">
+			<p class="g-pstyle1">37 countries supporting China</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.3447%;margin-top:-3.9px;left:69.7476%;width:169px;">
+			<p class="g-pstyle1">Islamic Cooperation Member Nations</p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_57 -->
+	<div id="g-china_countries_hw1-Artboard_57" class="g-artboard" style="width:425px; height:252.155109509953px;" data-aspect-ratio="1.685" data-min-width="425" data-max-width="587">
+		<img id="g-china_countries_hw1-Artboard_57-img" class="g-aiImg g-aiAbs" alt="" src="china_countries_hw1-Artboard_57.png"/>
+		<div id="g-ai2-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.5349%;margin-top:-6.4px;left:0.4101%;width:445px;">
+			<p class="g-pstyle0">China&rsquo;s Foreign Direct Investment into the supporting and condemning countries between 2017-2019</p>
+		</div>
+		<div id="g-ai2-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.9039%;margin-top:-5.3px;left:88.0878%;width:67px;">
+			<p class="g-pstyle1">billion dollars</p>
+		</div>
+	</div>
+
+</div>
+                        <!-- End ai2html - 2019-09-09 09:33 -->
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">
+            
+            
+
+            I made the graphic below using a plotting tool Matplotlib. I analyzed the historical dataset using Python and Excel and finished it up with Adobe Illustrator touch-ups.</p>
+    
+<img src="/Users/aliyaute/Desktop/Fall_2019_Columbia/Fall_Data/hw1/templat_medium.png"  width='770' height='550'>
+            
+        <p class="body-text serif">This is an example of a map created using QGIS.</p>
+    </div>
+    
+    <script type="text/javascript">
+        (function() {
+            // only want one resizer on the page
+            if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+            document.documentElement.className += " g-resizer-v3-init";
+            // require IE9+
+            if (!("querySelector" in document)) return;
+            function resizer() {
+                var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                    widthById = {};
+                elements.forEach(function(el) {
+                    var parent = el.parentNode,
+                        width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                        minwidth = el.getAttribute("data-min-width"),
+                        maxwidth = el.getAttribute("data-max-width");
+                    widthById[parent.id] = width;
+                    if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                        el.style.display = "block";
+                    } else {
+                        el.style.display = "none";
+                    }
+                });
+                try {
+                    if (window.parent && window.parent.$) {
+                        window.parent.$("body").trigger("resizedcontent", [window]);
+                    }
+                    if (window.require) {
+                        require(['foundation/main'], function() {
+                            require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                                AppCommunicator.triggerResize();
+                            });
+                        });
+                    }
+                } catch(e) { console.log(e); }
+            }
+            document.addEventListener('DOMContentLoaded', resizer);
+            // feel free to replace throttle with _.throttle, if available
+            window.addEventListener('resize', throttle(resizer, 200));        
+            function throttle(func, wait) {
+                // from underscore.js
+                var _now = Date.now || function() { return new Date().getTime(); },
+                    context, args, result, timeout = null, previous = 0;
+                var later = function() {
+                    previous = _now();
+                    timeout = null;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                };
+                return function() {
+                    var now = _now(), remaining = wait - (now - previous);
+                    context = this;
+                    args = arguments;
+                    if (remaining <= 0 || remaining > wait) {
+                        if (timeout) {
+                            clearTimeout(timeout);
+                            timeout = null;
+                        }
+                        previous = now;
+                        result = func.apply(context, args);
+                        if (!timeout) context = args = null;
+                    } else if (!timeout && options.trailing !== false) {
+                        timeout = setTimeout(later, remaining);
+                    }
+                    return result;
+                };
+            }
+           
+        })();
+    </script>
+    <!-- Generated by ai2html v0.89.0 - 2019-09-25 19:55 -->
+    <!-- ai file: templates.ai -->
+    <style type='text/css' media='screen,print'>
+        #g-templates-box .g-artboard {
+            margin:0 auto;
+        }
+        #g-templates-box p {
+            margin:0;
+        }
+        .g-aiAbs {
+            position:absolute;
+        }
+        .g-aiImg {
+            display:block;
+            width:100% !important;
+        }
+        .g-aiSymbol {
+            position: absolute;
+            box-sizing: border-box;
+        }
+        .g-aiPointText p { white-space: nowrap; }
+        #g-templates-medium {
+            position:relative;
+            overflow:hidden;
+        }
+        #g-templates-medium p {
+            font-family:arial,helvetica,sans-serif;
+            font-size:11px;
+            line-height:13px;
+            height:auto;
+            filter:alpha(opacity=100);
+            -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+            opacity:1;
+            letter-spacing:0em;
+            text-align:left;
+            color:rgb(0,0,0);
+            text-transform:none;
+            padding-bottom:0;
+            padding-top:0;
+            mix-blend-mode:normal;
+            font-style:normal;
+            position:static;
+        }
+        #g-templates-medium .g-pstyle0 {
+            font-weight:bold;
+            font-size:26px;
+            line-height:15px;
+            height:15px;
+            color:rgb(43,43,43);
+        }
+        #g-templates-medium .g-pstyle1 {
+            font-weight:bold;
+            line-height:14px;
+            height:14px;
+            color:rgb(51,51,51);
+        }
+        #g-templates-medium .g-pstyle2 {
+            font-weight:bold;
+            font-size:9px;
+            line-height:11px;
+            height:11px;
+            color:rgb(51,51,51);
+        }
+        #g-templates-medium .g-pstyle3 {
+            font-weight:bold;
+            font-size:9px;
+            line-height:11px;
+            height:11px;
+            color:rgb(38,38,38);
+        }
+        #g-templates-medium .g-pstyle4 {
+            font-weight:bold;
+            font-size:10px;
+            line-height:12px;
+            height:12px;
+            color:rgb(33,33,33);
+        }
+        #g-templates-medium .g-pstyle5 {
+            font-weight:bold;
+            font-size:10px;
+            line-height:15px;
+            height:15px;
+            color:rgb(46,46,46);
+        }
+        #g-templates-medium .g-pstyle6 {
+            height:13px;
+        }
+        #g-templates-medium .g-pstyle7 {
+            font-size:12px;
+            line-height:14px;
+            height:14px;
+            color:rgb(102,102,102);
+        }
+        #g-templates-medium .g-cstyle0 {
+            color:rgb(82,82,82);
+        }
+        #g-templates-laptop {
+            position:relative;
+            overflow:hidden;
+        }
+        #g-templates-laptop p {
+            font-family:arial,helvetica,sans-serif;
+            font-size:21px;
+            line-height:25px;
+            height:auto;
+            filter:alpha(opacity=100);
+            -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+            opacity:1;
+            letter-spacing:0em;
+            text-align:left;
+            color:rgb(0,0,0);
+            text-transform:none;
+            padding-bottom:0;
+            padding-top:0;
+            mix-blend-mode:normal;
+            font-style:normal;
+            position:static;
+        }
+        #g-templates-laptop .g-pstyle0 {
+            font-weight:bold;
+            font-size:20px;
+            line-height:24px;
+            height:24px;
+            text-align:justify;
+        }
+        #g-templates-laptop .g-pstyle1 {
+            font-weight:bold;
+            font-size:19px;
+            line-height:23px;
+            height:23px;
+            text-align:justify;
+            color:rgb(130,130,130);
+        }
+        #g-templates-laptop .g-pstyle2 {
+            height:25px;
+        }
+        #g-templates-laptop .g-pstyle3 {
+            font-size:20px;
+            line-height:24px;
+            height:24px;
+        }
+        #g-templates-laptop .g-pstyle4 {
+            font-weight:bold;
+            font-size:20px;
+            line-height:24px;
+            height:24px;
+        }
+        #g-templates-laptop .g-pstyle5 {
+            font-size:12px;
+            line-height:14px;
+            height:14px;
+            color:rgb(102,102,102);
+        }
+        #g-templates-laptop .g-cstyle0 {
+            color:rgb(82,82,82);
+        }
+        #g-templates-mobile {
+            position:relative;
+            overflow:hidden;
+        }
+        #g-templates-mobile p {
+            font-family:arial,helvetica,sans-serif;
+            font-size:17px;
+            line-height:20px;
+            height:auto;
+            filter:alpha(opacity=100);
+            -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+            opacity:1;
+            letter-spacing:0em;
+            text-align:left;
+            color:rgb(0,0,0);
+            text-transform:none;
+            padding-bottom:0;
+            padding-top:0;
+            mix-blend-mode:normal;
+            font-style:normal;
+            position:static;
+        }
+        #g-templates-mobile .g-pstyle0 {
+            font-weight:bold;
+            font-size:16px;
+            line-height:19px;
+            height:19px;
+            text-align:justify;
+        }
+        #g-templates-mobile .g-pstyle1 {
+            font-weight:bold;
+            font-size:15px;
+            line-height:18px;
+            height:18px;
+            text-align:justify;
+            color:rgb(130,130,130);
+        }
+        #g-templates-mobile .g-pstyle2 {
+            height:20px;
+        }
+        #g-templates-mobile .g-pstyle3 {
+            font-weight:bold;
+            font-size:16px;
+            line-height:19px;
+            height:19px;
+        }
+        #g-templates-mobile .g-pstyle4 {
+            font-size:9px;
+            line-height:10px;
+            height:10px;
+            color:rgb(102,102,102);
+        }
+        #g-templates-mobile .g-cstyle0 {
+            color:rgb(82,82,82);
+        }
+        #g-templates-mobile .g-cstyle1 {
+            font-size:8px;
+        }
+    
+    </style>
+    
+    <div id="g-templates-box" class="ai2html">
+    
+        <!-- Artboard: medium -->
+        <div id="g-templates-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+            <img id="g-templates-medium-img" class="g-aiImg g-aiAbs" alt="" src="templates5-medium.png"/>
+            <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.4293%;margin-top:-10.3px;left:23.4189%;width:324px;">
+                <p class="g-pstyle0">2018 Texas Senate Race</p>
+            </div>
+            <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.7725%;margin-top:-8.5px;left:64.4667%;width:56px;">
+                <p class="g-pstyle1">Dallas</p>
+            </div>
+            <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.9328%;margin-top:-6.7px;left:16.4278%;width:56px;">
+                <p class="g-pstyle2">El Paso</p>
+            </div>
+            <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:55.2269%;margin-top:-6.7px;left:67.8253%;width:60px;">
+                <p class="g-pstyle3">Houston</p>
+            </div>
+            <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:57.2128%;margin-top:-7.2px;left:60.8649%;width:54px;">
+                <p class="g-pstyle4">Austin</p>
+            </div>
+            <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:58.0363%;margin-top:-8.7px;left:48.5255%;width:82px;">
+                <p class="g-pstyle5">San Antonio</p>
+            </div>
+            <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.369%;margin-top:-7.3px;left:13.6544%;width:84px;">
+                <p class="g-pstyle6">Ted Cruz <span class="g-cstyle0">(R)</span></p>
+            </div>
+            <div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:93.722%;margin-top:-7.3px;left:13.7847%;width:112px;">
+                <p class="g-pstyle6">Beto O&rsquo;Rourke <span class="g-cstyle0">(D)</span></p>
+            </div>
+            <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:96.7759%;margin-top:-15.3px;left:75%;width:157px;">
+                <p class="g-pstyle7">Source: Washington Post</p>
+            </div>
+        </div>
+    
+        <!-- Artboard: laptop -->
+        <div id="g-templates-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+            <img id="g-templates-laptop-img" class="g-aiImg g-aiAbs" alt="" src="templates4-laptop.png"/>
+            <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.982%;margin-top:-14.4px;left:21.5157%;width:54px;">
+                <p class="g-pstyle0">      </p>
+            </div>
+            <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.7949%;margin-top:-13.8px;left:54.1338%;width:80px;">
+                <p class="g-pstyle1">    Votes</p>
+            </div>
+            <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:25.0806%;margin-top:-13.8px;left:3.5216%;width:109px;">
+                <p class="g-pstyle1">Candidates </p>
+            </div>
+            <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:25.0806%;margin-top:-13.8px;left:84.1338%;width:76px;">
+                <p class="g-pstyle1">      Pct.</p>
+            </div>
+            <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.5844%;margin-top:-14.5px;left:13.9776%;width:124px;">
+                <p class="g-pstyle2">Ted Cruz <span class="g-cstyle0">(R) </span></p>
+            </div>
+            <div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.9766%;margin-top:-13.9px;left:54.1562%;width:112px;">
+                <p class="g-pstyle3"> 4,260,553   </p>
+            </div>
+            <div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.4106%;margin-top:-14.4px;left:84.5454%;width:68px;">
+                <p class="g-pstyle4">50.9%</p>
+            </div>
+            <div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:62.7273%;margin-top:-14.5px;left:14.0569%;width:167px;">
+                <p class="g-pstyle2">Beto O&rsquo;Rourke <span class="g-cstyle0">(D) </span></p>
+            </div>
+            <div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:64.2623%;margin-top:-13.9px;left:55.0518%;width:103px;">
+                <p class="g-pstyle3">4,045,632  </p>
+            </div>
+            <div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:65.2677%;margin-top:-14.4px;left:84.2355%;width:68px;">
+                <p class="g-pstyle4">48.3%</p>
+            </div>
+            <div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:99.8563%;margin-top:-22.5px;left:0.4082%;width:160px;">
+                <p class="g-pstyle5"> Source: Washington Post</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    
+        <!-- Artboard: mobile -->
+        <div id="g-templates-mobile" class="g-artboard" style="width:375px; height:265.799999999999px;" data-aspect-ratio="1.411" data-min-width="375" data-max-width="489">
+            <img id="g-templates-mobile-img" class="g-aiImg g-aiAbs" alt="" src="templates6-mobile.png"/>
+            <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:9.2162%;margin-top:-11.5px;left:21.4909%;width:46px;">
+                <p class="g-pstyle0">      </p>
+            </div>
+            <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:11.2755%;margin-top:-11px;left:3.6247%;width:88px;">
+                <p class="g-pstyle1">Candidates </p>
+            </div>
+            <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:11.2755%;margin-top:-11px;left:77.5307%;width:43px;">
+                <p class="g-pstyle1">Pct.</p>
+            </div>
+            <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:30.6936%;margin-top:-11.6px;left:14.0065%;width:99px;">
+                <p class="g-pstyle2">Ted Cruz <span class="g-cstyle0">(R) </span></p>
+            </div>
+            <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:32.1658%;margin-top:-11.5px;left:76.0727%;width:57px;">
+                <p class="g-pstyle3">50.9%</p>
+            </div>
+            <div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:51.3858%;margin-top:-11.6px;left:14.0852%;width:132px;">
+                <p class="g-pstyle2">Beto O&rsquo;Rourke <span class="g-cstyle0">(D) </span></p>
+            </div>
+            <div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:54.3629%;margin-top:-11.5px;left:75.7648%;width:57px;">
+                <p class="g-pstyle3">48.3%</p>
+            </div>
+            <div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:95.2892%;margin-top:-16.3px;left:4%;width:127px;">
+                <p class="g-pstyle4"><span class="g-cstyle1"> </span>Source: Washington Post</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    
+    </div>
+    
+    <!-- End ai2html - 2019-09-25 19:55 -->
+    
+      
+  </body>
+</html>
