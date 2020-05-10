@@ -1,0 +1,14 @@
+Build tools
+
+-minification/obfuscation
+- transpilation
+- polyfills 
+- tree shaking
+
+function(d)
+d=>....function(d)
+Math.max(...numbers)
+
+webpack
+gulp
+parcel
